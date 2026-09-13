@@ -1,8 +1,6 @@
 # 🧱 A-5 Dev Stack Builder Website
 
-<p align="center">
-  <img src="./public/banner-stack.png" alt="Dev Stack banner" width="320" />
-</p>
+
 
 <p align="center">
   <img alt="React" src="https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white" />
