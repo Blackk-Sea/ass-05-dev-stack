@@ -2,7 +2,6 @@
 
 
 
-![Dev Stack — hero, technology grid and the Your Stack panel](./docs/screenshot.png)
 
 ##  Description
 
