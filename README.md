@@ -116,7 +116,7 @@ arrived. The "Add to Stack" / "✓ Added to Stack" button label is another small
 
 Data goes **down** through props: `TechnologiesSection` passes `technologies`, `isInStack` and `onAdd`
 into `<TechGrid />`, which passes them on to each `<TechCard />`. A child sends something **up** by
-calling a function that the parent gave it as a prop — it never modifies the parent's state directly.
+calling a function that the parent gave it as a prop , it never modifies the parent's state directly.
 Here `TechCard` calls `onAdd(tech)` when its button is clicked; that function is `addToStack` from
 `StackProvider`, which updates the stack state, and React re-renders both the cards and the sidebar with
 the new selection. For the ✕ button it is the same pattern with `onRemove(tech)`.
