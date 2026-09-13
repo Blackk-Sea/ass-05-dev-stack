@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fallback values so the page still looks right before JS runs.
+   The real values are written by src/theme/brand.js -> applyBrandTheme(). */
+:root {
+  --brand-from: #f97316;
+  --brand-via: #e11d76;
+  --brand-to: #8b5cf6;
+  --brand-solid: #d91b7e;
+  --brand-soft: #fdf2f8;
+  --brand-gradient: linear-gradient(90deg, #f97316 0%, #e11d76 50%, #8b5cf6 100%);
+  --brand-gradient-diagonal: linear-gradient(135deg, #f97316 0%, #e11d76 50%, #8b5cf6 100%);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans text-slate-900 antialiased;
+  }
+
+  /* Keyboard focus always visible, and always on brand. */
+  :focus-visible {
+    outline: 2px solid var(--brand-solid);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: var(--brand-soft);
+    color: var(--brand-solid);
+  }
+}
+
+@layer components {
+  /* One shared page shell so every section lines up on the same grid. */
+  .shell {
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Brand gradient applied to text. */
+  .text-gradient {
+    background-image: var(--brand-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Primary (gradient) button. */
+  .btn-brand {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-white shadow-brand transition duration-200 hover:brightness-110 active:brightness-95 disabled:cursor-not-allowed disabled:opacity-60 disabled:shadow-none;
+  }
+
+  /* Neutral outlined button. */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition duration-200 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900;
+  }
+
+  /* The dark, full width "Add to Stack" button on every technology card. */
+  .btn-dark {
+    @apply inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition duration-200 hover:bg-slate-800 active:bg-slate-950;
+  }
+}
+
+/* Nicer scrollbar for the long technology list on desktop. */
+@media (min-width: 1024px) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+}
