@@ -12,6 +12,8 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-22c55e" />
 </p>
 
+![Dev Stack — hero, technology grid and the Your Stack panel](./docs/screenshot.png)
+
 ## 📖 Description
 
 **Dev Stack** is a single-page React app that helps developers plan a project's technology stack

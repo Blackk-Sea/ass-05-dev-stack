@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative overflow-hidden scroll-mt-24">
-      <div className="shell grid items-center gap-10 py-12 lg:grid-cols-2 lg:gap-14 lg:py-20">
+      <div className="shell grid items-center gap-10 py-10 lg:grid-cols-2 lg:gap-14 lg:py-14">
         <div className="animate-fade-up">
           <h1 className="text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.25rem]">
             <span className="block">Build Your Ideal</span>
@@ -42,10 +42,10 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[460px] lg:max-w-none">
-          {/* Soft brand glow behind the banner artwork. */}
+        <div className="relative mx-auto w-full max-w-[380px] lg:max-w-[420px]">
+          {/* Barely-there brand glow so the artwork sits on clean white. */}
           <div
-            className="absolute inset-6 rounded-full bg-brand opacity-20 blur-3xl"
+            className="absolute inset-16 rounded-full bg-brand opacity-[0.08] blur-3xl"
             aria-hidden="true"
           />
           <img
