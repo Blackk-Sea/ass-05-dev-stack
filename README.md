@@ -36,13 +36,13 @@ selection, and a small toast in the corner confirms every action you take.
 
 ##  3 Key Features
 
-1. ** Technology catalogue loaded from JSON** — 15 technologies are fetched from a JSON file with a
+01. ** Technology catalogue loaded from JSON** — 15 technologies are fetched from a JSON file with a
    real loading spinner, an error fallback, and a 3 / 2 / 1-column responsive grid. Every card shows
    its icon, badge, category chip, difficulty and star rating.
-2. ** Live "Your Stack" builder** — add any technology to a sidebar panel that counts your picks
+02. ** Live "Your Stack" builder** — add any technology to a sidebar panel that counts your picks
    ("2 Technology Selected"), lists each one with a ✕ remove button, supports "Remove All", blocks
    duplicates with a warning toast, and switches between an empty state and a filled state.
-3. ** One-gradient brand theme + polished UX** — a single shared orange → pink → violet gradient
+03. ** One-gradient brand theme + polished UX** — a single shared orange → pink → violet gradient
    drives the brand name, the hero highlight and the primary buttons; add to that a sticky navbar
    with a mobile hamburger menu, toast feedback for every action, smooth scrolling, and a fully
    responsive layout down to 320 px.
