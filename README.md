@@ -55,7 +55,7 @@ selection, and a small toast in the corner confirms every action you take.
 
 ### 1. What is JSX, and why is it used in React?
 
-JSX is the HTML-like syntax we write inside JavaScript files — for example
+JSX is the HTML like syntax we write inside JavaScript files, for example
 `<h3 className="text-xl">{tech.name}</h3>`. A build tool (Vite, in this project) turns it into plain
 JavaScript function calls before the browser sees it. React uses JSX because it keeps markup and the
 logic that produces it in the same place, so a component reads almost exactly like the UI it renders.
