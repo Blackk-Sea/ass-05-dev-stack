@@ -2,14 +2,6 @@
 
 
 
-<p align="center">
-  <img alt="React" src="https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white" />
-  <img alt="Vite" src="https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white" />
-  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white" />
-  <img alt="React Toastify" src="https://img.shields.io/badge/React--Toastify-11-FF7043" />
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-22c55e" />
-</p>
-
 ![Dev Stack — hero, technology grid and the Your Stack panel](./docs/screenshot.png)
 
 ##  Description
