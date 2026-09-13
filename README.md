@@ -1,4 +1,4 @@
-# 🧱 Dev Stack — Build Your Ideal Development Stack
+# 🧱 A-5 Dev Stack Builder Website
 
 <p align="center">
   <img src="./public/banner-stack.png" alt="Dev Stack banner" width="320" />
@@ -14,7 +14,7 @@
 
 ![Dev Stack — hero, technology grid and the Your Stack panel](./docs/screenshot.png)
 
-## 📖 Description
+##  Description
 
 **Dev Stack** is a single-page React app that helps developers plan a project's technology stack
 without opening twenty browser tabs. You browse a curated catalogue of frontend, backend, database,
@@ -25,121 +25,44 @@ That panel becomes a short, shareable summary of the tools your next project wil
 Everything is client side: the technology list lives in a JSON file, the only state is your own
 selection, and a small toast in the corner confirms every action you take.
 
-> 🎨 The whole interface is themed from **one** gradient (orange → pink → violet) defined in
+>  The whole interface is themed from **one** gradient (orange → pink → violet) defined in
 > `src/theme/brand.js`. Change those three colours and the logo, the hero heading, the buttons,
 > the focus rings and the shadows all re-theme together.
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
-| Technology | Why it is here |
-| --- | --- |
-| **React 19** | Component-based UI, hooks for state and data loading |
-| **Vite 8** | Blazing-fast dev server and production build |
-| **Tailwind CSS 3** | Utility-first styling, responsive from mobile to desktop |
-| **JavaScript (ES6+)** | Plain JS — no TypeScript — with arrow functions, async/await and modules |
-| **React-Toastify 11** | Toast alerts for add, duplicate, remove and remove-all actions |
-| **JSON** | `public/data/technologies.json` holds the 15-technology catalogue |
-| **Context API + Hooks** | `useState`, `useEffect`, `useContext`, `useMemo`, `useCallback` |
-| **Inter (variable font)** | Self-hosted via `@fontsource-variable/inter`, no external font request |
+
+ **React 19** ==> Component-based UI, hooks for state and data loading
+ **Vite 8** ==> Blazing-fast dev server and production build
+ **Tailwind CSS 3** ==> Utility-first styling, responsive from mobile to desktop
+ **JavaScript (ES6+)** ==> Plain JS — no TypeScript — with arrow functions, async/await and modules 
+ **React-Toastify 11** ==> Toast alerts for add, duplicate, remove and remove-all actions 
+ **JSON** ==> `public/data/technologies.json` holds the 15-technology catalogue
+ **Context API + Hooks** ==> `useState`, `useEffect`, `useContext`, `useMemo`, `useCallback`
+ **Inter (variable font)** ==> Self-hosted via `@fontsource-variable/inter`, no external font request
 
 ---
 
-## ✨ 3 Key Features
+##  3 Key Features
 
-1. **🃏 Technology catalogue loaded from JSON** — 15 technologies are fetched from a JSON file with a
+1. ** Technology catalogue loaded from JSON** — 15 technologies are fetched from a JSON file with a
    real loading spinner, an error fallback, and a 3 / 2 / 1-column responsive grid. Every card shows
    its icon, badge, category chip, difficulty and star rating.
-2. **🧰 Live "Your Stack" builder** — add any technology to a sidebar panel that counts your picks
+2. ** Live "Your Stack" builder** — add any technology to a sidebar panel that counts your picks
    ("2 Technology Selected"), lists each one with a ✕ remove button, supports "Remove All", blocks
    duplicates with a warning toast, and switches between an empty state and a filled state.
-3. **🎨 One-gradient brand theme + polished UX** — a single shared orange → pink → violet gradient
+3. ** One-gradient brand theme + polished UX** — a single shared orange → pink → violet gradient
    drives the brand name, the hero highlight and the primary buttons; add to that a sticky navbar
    with a mobile hamburger menu, toast feedback for every action, smooth scrolling, and a fully
    responsive layout down to 320 px.
 
 ---
 
-## 🚀 Getting Started
 
-```bash
-# 1. clone the repository
-git clone <your-repo-url>
-cd dev-stack
 
-# 2. install dependencies
-npm install
-
-# 3. start the dev server
-npm run dev            # http://localhost:5173
-
-# 4. production build
-npm run build          # output in /dist
-npm run preview        # preview the build locally
-```
-
-Deploy the `dist` folder anywhere — Netlify, Vercel, Cloudflare Pages or GitHub Pages.
-
----
-
-## 📁 Project Structure
-
-```
-dev-stack/
-├── public/
-│   ├── banner-stack.png          # hero artwork
-│   ├── favicon.svg               # gradient "DS" favicon
-│   ├── icons/                    # local fallback copies of every tech logo
-│   └── data/technologies.json    # ← the 15-technology catalogue (not hardcoded)
-└── src/
-    ├── components/               # Navbar, Hero, TechCard, StackPanel, Footer, …
-    ├── context/StackContext.jsx  # stack state + toast feedback
-    ├── hooks/useTechnologies.js  # fetch + loading + error state
-    ├── theme/brand.js            # 🎨 single source of truth for the brand gradient
-    ├── utils/                    # navigation helper, badge colour tones
-    ├── App.jsx
-    ├── main.jsx
-    └── index.css                 # Tailwind entry + shared component classes
-```
-
----
-
-## ✅ Feature Checklist
-
-- [x] Sticky navbar — logo + links + Sign In / Sign Up pill, active link highlight
-- [x] Mobile navbar — hamburger · logo · auth buttons, with a dropdown menu
-- [x] Hero — two-tone gradient heading, description, gradient + outlined buttons, banner image
-- [x] 15 technologies loaded from `technologies.json`
-- [x] Cards with icon, badge, name, description, category chip, difficulty, rating and button
-- [x] "Your Stack" panel with count, empty state, per-item ✕ and "Remove All"
-- [x] Duplicate protection with a warning toast; added cards lock and read "✓ Added to Stack"
-- [x] React-Toastify alerts for add, duplicate, remove and remove-all
-- [x] Loading spinner while the JSON is being fetched
-- [x] Footer with brand block, Product / Company / Legal groups, socials and bottom bar
-- [x] Responsive: 1 column on mobile, 2 on tablet, 3 on desktop
-- [x] Accessibility: keyboard focus rings, `aria-label`s, Escape closes overlays
-
----
-
-## 🎨 Re-theming in One Line
-
-```js
-// src/theme/brand.js
-export const brand = {
-  gradient: { from: '#F97316', via: '#E11D76', to: '#8B5CF6' }, // orange → pink → violet
-  solid: '#D91B7E',
-  soft: '#FDF2F8',
-};
-```
-
-`applyBrandTheme()` writes these values onto `<html>` as CSS variables, and Tailwind's `bg-brand`,
-`text-gradient`, `shadow-brand` and `bg-brand-diagonal` utilities read them. Change the three stops
-above and the entire UI follows.
-
----
-
-## 💬 React Questions & Answers
+##  React Questions & Answers
 
 ### 1. What is JSX, and why is it used in React?
 
@@ -211,6 +134,3 @@ the new selection. For the ✕ button it is the same pattern with `onRemove(tech
 
 ---
 
-## 📄 License
-
-Built as a practice project — free to learn from, copy and improve.
