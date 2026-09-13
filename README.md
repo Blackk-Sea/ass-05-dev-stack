@@ -97,7 +97,7 @@ something goes wrong — and the cleanup function aborts the request if the comp
 
 Because React needs a stable identity for each rendered item so it can tell which items were added,
 removed or reordered between renders. Without a key React falls back to the position in the array,
-which causes wrong or stale DOM updates — for example the wrong card keeping an "✓ Added to Stack"
+which causes wrong or stale DOM updates , for example the wrong card keeping an "✓ Added to Stack"
 label after a list change. Keys are not passed to the component as props; they are used only by React
 itself. In this project each card is rendered as
 `<TechCard key={tech.id} … />` and each stack item as `<StackItem key={tech.id} … />`, using the unique
